@@ -1,0 +1,231 @@
+    * {
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+    }
+    
+    body,
+    html {
+        padding: 0;
+        margin: 0;
+        background: linear-gradient(180deg, #1DA88F 0%, rgba(99, 187, 68, 0.38) 100%);
+        width: 100%;
+        height: 100%;
+        font-family: Century Gothic;
+        overflow: hidden;
+    }
+    
+    .wrap {
+        display: flex;
+        flex-flow: column wrap;
+        padding: 0 2em;
+    }
+    
+    h1 {
+        margin: 5em auto 1.0em auto;
+        color: #FFFDFD;
+        font-family: Century Gothic;
+        text-transform: uppercase;
+        font-size: .8em;
+    }
+    
+    section.form-container {
+        display: flex;
+        flex-flow: column wrap;
+        background: #FFF;
+    }
+    
+    .form-container h3 {
+        text-align: center;
+        font-size: 1.2em;
+        color: rgba(91, 105, 101, 0.719);
+    }
+    
+    .form-container .form-wrap {
+        display: flex;
+        flex-flow: column wrap;
+        padding: 0 2em;
+    }
+    
+    input[type="text"],
+    input[type="password"],
+    input[type="email"] {
+        width: 100%;
+        padding: 0.9em;
+        margin-bottom: .8em;
+        border: none;
+        background: #F6F6F6;
+        outline: none;
+        border-radius: 0.3em;
+        font-size: 1em;
+    }
+    
+     ::placeholder {
+        position: relative;
+        left: 1em;
+        color: #757677;
+    }
+    
+    .input-email,
+    .input-password,
+    .input-text {
+        position: relative;
+    }
+    
+    .input-email:before {
+        content: "\f0e0";
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        color: #757677;
+        font-size: 18px;
+        padding-left: 0.5em;
+        position: absolute;
+        top: .7em;
+        left: 0;
+        z-index: 2;
+    }
+    
+    .input-password:before {
+        content: "\f023";
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        color: #757677;
+        font-size: 18px;
+        padding-left: 0.5em;
+        position: absolute;
+        top: .7em;
+        left: 0;
+        z-index: 1;
+    }
+    
+    .input-text:before {
+        content: "\f007";
+        font-family: FontAwesome;
+        font-style: normal;
+        font-weight: normal;
+        text-decoration: inherit;
+        color: #757677;
+        font-size: 18px;
+        padding-left: 0.5em;
+        position: absolute;
+        top: .7em;
+        left: 0;
+        z-index: 1;
+    }
+    
+    button.btn-sign-in {
+        margin-bottom: 1em;
+        padding: .4em;
+        line-height: 1em;
+        background: linear-gradient(180deg, #139E10 0%, rgba(32, 92, 31, 0.56) 100%);
+        border: none;
+        border-radius: 0.3em;
+        font-size: 1.1em;
+        color: #FFF;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+    
+    button.btn-sign-in:hover {
+        background: rgb(10, 100, 9);
+        transition: background 1.5s ease-in-out;
+    }
+    
+    p {
+        font-size: .7em;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    a:hover {
+        text-decoration: underline;
+    }
+    /* Tablet Responsiveness view*/
+    
+    @media (min-width: 767px) and (max-width: 1000px) {
+        .wrap {
+            padding: 0 8em;
+        }
+        h1 {
+            margin: .8em auto 1.5em auto;
+            font-size: 1.5em;
+        }
+        section.form-container {
+            padding: 1em;
+        }
+        .form-container .form-wrap {
+            padding: 0 3em;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: .9em;
+            margin-bottom: 1.0em;
+            font-size: 1em;
+        }
+        button.btn-sign-in {
+            margin-bottom: 1.5em;
+            padding: .7em;
+            line-height: 1em;
+        }
+        p {
+            font-size: 1.0em;
+        }
+    }
+    
+    @media (min-width: 1001px) and (max-width: 1300px) {
+        .wrap {
+            padding: 0 10em;
+        }
+        h1 {
+            margin: 1.5em auto 1.5em auto;
+            font-size: 1.5em;
+        }
+    }
+    /* Desktop Responsiveness view*/
+    
+    @media (min-width: 1301px) {
+        .wrap {
+            padding: 0 30em;
+        }
+        h1 {
+            margin: 1em auto 1.0em auto;
+            font-size: 1.8em;
+        }
+        .form-container .form-wrap {
+            padding: 0 1em;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 1.0em;
+            margin-bottom: 1.2em;
+            font-size: 1em;
+        }
+        button.btn-sign-in {
+            margin-bottom: 1.5em;
+            padding: .7em;
+            line-height: 1em;
+        }
+        p {
+            font-size: 0.8em;
+        }
+    }
+    
+    @media (min-width: 1500px) {
+        .wrap {
+            padding: 0 33em;
+        }
+        h1 {
+            margin: 2em auto 1.0em auto;
+            font-size: 1.8em;
+        }
+    }
