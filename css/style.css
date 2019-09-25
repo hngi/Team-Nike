@@ -10,7 +10,8 @@
     html {
         padding: 0;
         margin: 0;
-        background: linear-gradient(180deg, #1DA88F 0%, rgba(99, 187, 68, 0.38) 100%);
+        background: url('/images/Rectangle.png');
+        /* background: linear-gradient(180deg, #1DA88F 0%, rgba(99, 187, 68, 0.38) 100%); */
         width: 100%;
         height: 100%;
         font-family: Century Gothic;
@@ -20,12 +21,11 @@
     .wrap {
         display: flex;
         flex-flow: column wrap;
-        padding: 0 2em;
     }
     
     h1 {
         margin: 5em auto 1.0em auto;
-        color: #FFFDFD;
+        color: #344A84;
         font-family: Century Gothic;
         text-transform: uppercase;
         font-size: .8em;
@@ -34,13 +34,14 @@
     section.form-container {
         display: flex;
         flex-flow: column wrap;
-        background: #FFF;
+        background: transparent;
+        background: rgba(0, 0, 0, .1);
     }
     
     .form-container h3 {
         text-align: center;
         font-size: 1.2em;
-        color: rgba(91, 105, 101, 0.719);
+        color: #252525;
     }
     
     .form-container .form-wrap {
@@ -59,12 +60,12 @@
         background: #F6F6F6;
         outline: none;
         border-radius: 0.3em;
-        font-size: 1em;
+        font-size: 1.5em;
     }
     
      ::placeholder {
         position: relative;
-        left: 1em;
+        left: .8em;
         color: #757677;
     }
     
@@ -80,12 +81,12 @@
         font-style: normal;
         font-weight: normal;
         text-decoration: inherit;
-        color: #757677;
+        color: rgba(0, 0, 0, 0.5);
         font-size: 18px;
         padding-left: 0.5em;
         position: absolute;
-        top: .7em;
-        left: 0;
+        top: .8em;
+        left: -.2em;
         z-index: 2;
     }
     
@@ -95,12 +96,12 @@
         font-style: normal;
         font-weight: normal;
         text-decoration: inherit;
-        color: #757677;
+        color: rgba(0, 0, 0, .5);
         font-size: 18px;
         padding-left: 0.5em;
         position: absolute;
-        top: .7em;
-        left: 0;
+        top: .8em;
+        left: -.2em;
         z-index: 1;
     }
     
@@ -110,12 +111,12 @@
         font-style: normal;
         font-weight: normal;
         text-decoration: inherit;
-        color: #757677;
+        color: rgba(0, 0, 0, .5);
         font-size: 18px;
         padding-left: 0.5em;
         position: absolute;
-        top: .7em;
-        left: 0;
+        top: .8em;
+        left: -.1em;
         z-index: 1;
     }
     
@@ -123,7 +124,7 @@
         margin-bottom: 1em;
         padding: .4em;
         line-height: 1em;
-        background: linear-gradient(180deg, #139E10 0%, rgba(32, 92, 31, 0.56) 100%);
+        background: #344A84;
         border: none;
         border-radius: 0.3em;
         font-size: 1.1em;
@@ -133,8 +134,8 @@
     }
     
     button.btn-sign-in:hover {
-        background: rgb(10, 100, 9);
-        transition: background 1.5s ease-in-out;
+        background: rgb(6, 37, 122);
+        transition: background .8s ease-in-out;
     }
     
     p {
