@@ -5,12 +5,15 @@ body, html{
     margin: 0px;
     padding: 0px;
     width:100%;
-    position: fixed;
+    position: relative;
+    overflow: auto;
     background-attachment: fixed;
     background-image:-webkit-linear-gradient(200deg,#fff 50%, #344A84 120%);
     background-image:-moz-linear-gradient(200deg,#fff 50%, #344A84 120%);
     background-image:linear-gradient(200deg,#fff 50%, #344A84 120%);
 }
+
+
 
 p{
 	font-family:Didact Gothic;
@@ -30,12 +33,32 @@ p{
 	font-size: 35px;
 	font-weight: bold;
 }
+.net-head3{
+	color: #344A84;
+  font-family:Didact Gothic;
+  font-size: 40px;
+}
 .net-head2{
-	font-size: 20px;
+  color: #344A84;
+  font-family:Didact Gothic;
+  font-size: 20px;
+}
+.net-display{
+  background-color: #344A84;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 20px;
+  padding: 80px;
+  opacity: 0.8;
+}
+.net-body{
+  margin-top: 150px;
 }
 
+.dis-worth{
+  font-size: 60px;
+}
 
-.form-box
 
 .signin-button{
 	  background-color:#344A84;
@@ -53,7 +76,7 @@ p{
 	  opacity: 0.8;
 	}
 
-input[type=text], input[type=email], input[type=password]{
+input[type=text], input[type=email], input[type=number], input[type=password]{
     background: #F5F5F5;
     box-sizing: border-box;
     border:none;
@@ -97,20 +120,11 @@ input[type=password], select {
   box-sizing: border-box;
 }
 
-
-
-.sidebar {
-    width: 200px;
-    height: 800px;
-    background: #7386D5;
-    text-decoration: none;
-    text-align: center;
-    overflow: hidden;
- 
-}
-
-.sidebar a {
-  list-style-type: none;
-  font-size: 26px;
-  font-family:Didact Gothic; 
+input[type=number], select {
+  width: 300px;
+  padding: 6px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border-radius: 6px;
+  box-sizing: border-box;
 }
