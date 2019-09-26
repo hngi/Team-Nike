@@ -17,7 +17,15 @@
 
     <?php
     session_start();
+    
     $msg = '';
+    
+     if (isset($_GET['signup'])) {
+        if ($_GET['signup'] == 'success') {
+            $msg = '<p style="color: green">Your account has been successfully created</p>';    
+            // echo 'hi';
+        }
+    }
 
     /* Trigger when the login btn is clicked */
     if (isset($_POST['log'])) {
