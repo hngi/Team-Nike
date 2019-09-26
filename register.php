@@ -46,10 +46,13 @@
                 "Email" => $email,
                 "Password" => $pwd
             ]);
-            file_put_contents("users.json", json_encode($user));
-
-            $_SESSION['Name'] = $name;
-            header('Location: home.php');
+            if (file_put_contents("users.json", json_encode($user))) {
+                // Start session
+                session_start();
+                // Store session variable
+                $user['Name'] = $_SESSION['Name'];
+                header('Location: index.php?signup=success');
+            }
         }
     }
 
