@@ -30,7 +30,7 @@ if (isset($_SESSION['Name'])) {
 
 
 		<div class="wrap">
-			<h1>Net worth Tracker</h1>
+			<h1>Net worth Calculator</h1>
 			<h3 class="wl-note">Welcome, <?php echo $user['Name']; ?></h3>
 			<section class="form-container">
 				<h3>Check your Net worth</h3>

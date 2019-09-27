@@ -45,7 +45,7 @@ section.form-container {
   background: transparent;
   background: rgba(52, 73, 132, 0.178);
   width: 350px;
-  margin: 100px auto;
+  margin: 50px auto 100px auto;
   padding: 1.5em;
 }
 

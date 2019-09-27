@@ -26,7 +26,7 @@ if (isset($_SESSION['Name'])) {
 <body>
 	<div class="wrap">
 		<div class="container-content">
-			<h1>Networth Tracker</h1>
+			<h1>Networth Calculator</h1>
 			<p class="wl-note">Welcome, <?php echo $user['Name']; ?></p>
 			<section class="form-container">
 				<h2>Declear your asset</h2>
