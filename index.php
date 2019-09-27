@@ -22,7 +22,7 @@
     
      if (isset($_GET['signup'])) {
         if ($_GET['signup'] == 'success') {
-            $msg = '<p style="color: green">Your account has been successfully created</p>';    
+            $msg = '<p style="color: green">Your account has been created successfully</p>';    
             // echo 'hi';
         }
     }

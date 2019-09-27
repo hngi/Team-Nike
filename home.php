@@ -75,7 +75,7 @@ if (isset($_SESSION['Name'])) {
 			</section>
 		</div>
 
-		<script src="app-copy.js"></script>
+		<script src="app.js"></script>
 	</body>
 
 </div>
