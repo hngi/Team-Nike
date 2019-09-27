@@ -14,3 +14,7 @@ function calc() {
 		document.querySelector('#result').innerHTML = toCurrency;
 	}
 }
+
+function restCalc() {
+    document.getElementById("myForm").reset();
+}

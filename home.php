@@ -33,16 +33,19 @@ if (isset($_SESSION['Name'])) {
 			<h1>Net worth Calculator</h1>
 			<h3 class="wl-note">Welcome, <?php echo $user['Name']; ?></h3>
 			<section class="form-container">
-				<div class="input-container">
-					<h3>Check your Net worth</h3>
-					<!-- <span>Enter your Assets in value</span> -->
-					<input type="text" class="input" id="assets" name="assets" placeholder="Asset value">
-					<!-- <span>Enter your Liquid asset in value</span> -->
-					<input type="text" class="input" id="cash" name="liquid-asset" placeholder="Cash value">
-					<!-- <span>Enter your Liabilities in value</span> -->
-					<input type="text" class="input" id="liability" name="liabilities" placeholder="liability value">
-					<button style="width: 100%" type="submit" id="submit-asset" class="btn-sign-in" onclick="calc()">Calculate Net Worth</button>
-				</div>
+				<form id="myForm">
+					<div class="input-container">
+						<h3>Check your Net worth</h3>
+						<!-- <span>Enter your Assets in value</span> -->
+						<input type="text" class="input" id="assets" name="assets" placeholder="Asset value">
+						<!-- <span>Enter your Liquid asset in value</span> -->
+						<input type="text" class="input" id="cash" name="liquid-asset" placeholder="Cash value">
+						<!-- <span>Enter your Liabilities in value</span> -->
+						<input type="text" class="input" id="liability" name="liabilities" placeholder="liability value">
+						<button style="width: 100%" type="button" id="submit-asset" class="btn-sign-in" onclick="calc()">Calculate Net Worth</button>
+						<button style="width: 100%; margin-top: -15px" type="button" id="submit-asset" class="btn-sign-in" onclick="restCalc()">Reset Calculator</button>
+					</div>
+				</form>
 				<div class="display-result">
 					<h3>Your current Net worth: <span id="result"></span>
 					</h3>
