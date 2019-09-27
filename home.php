@@ -42,13 +42,16 @@ if (isset($_SESSION['Name'])) {
 						<input type="text" class="input" id="cash" name="liquid-asset" placeholder="Cash value">
 						<!-- <span>Enter your Liabilities in value</span> -->
 						<input type="text" class="input" id="liability" name="liabilities" placeholder="liability value">
-						<button style="width: 100%" type="button" id="submit-asset" class="btn-sign-in" onclick="calc()">Calculate Net Worth</button>
+						<button style="width: 100%" type="button" id="calc-asset" class="btn-sign-in trigger">Calculate Net Worth</button>
 						<button style="width: 100%; margin-top: -15px" type="button" id="submit-asset" class="btn-sign-in" onclick="restCalc()">Reset Calculator</button>
 					</div>
 				</form>
 				<div class="display-result">
-					<h3>Your current Net worth: <span id="result"></span>
-					</h3>
+					<div class="display-result-content">
+						<span class="close-btn">×</span>
+						<h3>Your current Net worth: <span id="result"></span>
+						</h3>
+					</div>
 				</div>
 
 				<?php
@@ -72,7 +75,7 @@ if (isset($_SESSION['Name'])) {
 			</section>
 		</div>
 
-		<script src="app.js"></script>
+		<script src="app-copy.js"></script>
 	</body>
 
 </div>
