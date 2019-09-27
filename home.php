@@ -33,8 +33,8 @@ if (isset($_SESSION['Name'])) {
 			<h1>Net worth Calculator</h1>
 			<h3 class="wl-note">Welcome, <?php echo $user['Name']; ?></h3>
 			<section class="form-container">
-				<h3>Check your Net worth</h3>
 				<div class="input-container">
+					<h3>Check your Net worth</h3>
 					<!-- <span>Enter your Assets in value</span> -->
 					<input type="text" class="input" id="assets" name="assets" placeholder="Asset value">
 					<!-- <span>Enter your Liquid asset in value</span> -->
@@ -60,10 +60,11 @@ if (isset($_SESSION['Name'])) {
 				}
 
 				?>
-
-				<form action="home.php" method="post">
-					<button style="width: 100%" type="submit" class="btn-sign-in" name="logout">Logout</button>
-				</form>
+				<div class="logout">
+					<form action="home.php" method="post">
+						<button style="width: 100%" type="submit" class="btn-sign-in" name="logout">Logout</button>
+					</form>
+				</div>
 
 			</section>
 		</div>
