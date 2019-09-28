@@ -28,28 +28,28 @@
                   <form action="" class="form-box net-display text-center">
                   	<div class="input-box">
                     <label class="col-xs">-Landed Properties</label> 
-                    <input class="col-xs int-text"type="number" name="" placeholder=""><br>
+                    <input class="col-xs int-text" type="number" id="land" onchange="add()" name="" placeholder=""><br>
                 	</div>
                     <div class="input-box">
                     <label class="col-xs">-Funitures</label> 
-                    <input class="col-xs int-text"type="number" name="" placeholder=""><br>
+                    <input class="col-xs int-text" type="number" id="furniture" onchange="add()" name="" placeholder=""><br>
                 	</div>
                      <div class="input-box">
                     <label class="col-xs ">-Vehicles</label> 
-                    <input class="col-xs int-text"type="number" name="" placeholder=""><br>
+                    <input class="col-xs int-text" type="number" id="vehicles" onchange="add()" name="" placeholder=""><br>
                 	</div>
                 	<div class="input-box">
                     <label class="col-xs">-Royalty Payments</label> 
-                    <input class="col-xs int-text"type="number" name="" placeholder=""><br>
+                    <input class="col-xs int-text" type="number" onchange="add()" id="royalty" name="" placeholder=""><br>
                 	</div>
                 	<div class="input-box">
                     <label class="col-xs">Add other Assets</label> 
-                    <input class="col-xs int-text"type="number" name="" placeholder=""><br>
+                    <input class="col-xs int-text" type="number" id="others" onchange="add()" name="" placeholder=""><br>
                 	</div>
-                    <input class="calc-btn" type="reset" value="Reset Assets">
+                    <input class="calc-btn" type="reset" onchange="add()" value="Reset Assets">
                 	<div class="input-box">
                     <label class="col-xs">Total Assests:</label> 
-                    <input class="col-xs int-text"type="number" name="" placeholder="" disabled><br>
+                    <input class="col-xs int-text" type="number"  id="total" onchange="add()" name="" placeholder="" value=""><br>
                 	</div>
                   </form>
                 </div>
@@ -58,30 +58,30 @@
                     <form action="" class="form-box net-display text-center">
                      <div class="input-box">
                     <label class="col-xs">-Expenses</label> 
-                    <input class="col-xs int-text"type="number" name="" placeholder=""><br>
+                    <input class="col-xs int-text" type="number" id="expenses" onchange="sum()" name="" placeholder=""><br>
                 	</div>
                       <div class="input-box">
                     <label class="col-xs">-Personal loan</label> 
-                    <input class="col-xs int-text"type="number" name="" placeholder=""><br>
+                    <input class="col-xs int-text" type="number" id="loan" onchange="sum()" name="" placeholder=""><br>
                 	</div>
                       <div class="input-box">
                     <label class="col-xs">-Tax payable</label> 
-                    <input class="col-xs int-text"type="number" name="" placeholder=""><br>
+                    <input class="col-xs int-text" type="number" id="tax" onchange="sum()" name="" placeholder=""><br>
                 	</div>
                 	<div class="input-box">
                     <label class="col-xs">-Rent/Lease Payment</label> 
-                    <input class="col-xs int-text"type="number" name="" placeholder=""><br>
+                    <input class="col-xs int-text" type="number" id="rent" onchange="sum()" name="" placeholder=""><br>
                 	</div>
                 	<div class="input-box">
                     <label class="col-xs">Add other liabilities</label> 
-                    <input class="col-xs int-text"type="number" name="" placeholder=""><br>
+                    <input class="col-xs int-text" type="number" id="other" onchange="sum()" name="" placeholder=""><br>
                 	</div class="text-center">
                 	<div>
                     <input class="calc-btn " type="reset" value="Reset Liabilities">
                		</div>
                     <div class="input-box">
                     <label class="col-xs">Total Liabilities:</label> 
-                    <input class="col-xs int-text"type="number" name="" placeholder="" disabled><br>
+                    <input class="col-xs int-text" type="number" id="total-liabilities" onchange="sum()" name="" placeholder="" ><br>
                 	</div>
                 </form>
                 
@@ -90,10 +90,10 @@
                   
                 </div>
 				<div class="calc-back text-center">
-                	<button class="calc-button" >Calculate</button>
+                	<button class="calc-button" onclick="calc()" >Calculate</button>
                 	<div class="output-result">
                     <p>Total Networth:</p> 
-                    <input class="col-xs int-text"type="number" name="" placeholder="" disabled><br>
+                    <input class="col-xs int-text" type="number" id="net" name="" placeholder="" disabled><br>
                 	</div>
                 </div>
     </div>
@@ -101,11 +101,60 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script>
+        
+        
+      //inputs addition
+function add(){
+	var land = parseFloat(document.getElementById('land').value);
+	var furniture = parseFloat(document.getElementById('furniture').value);
+	var vehicles = parseFloat(document.getElementById('vehicles').value);
+	var royalty =  parseFloat(document.getElementById('royalty').value);
+	var others =  parseFloat(document.getElementById('others').value);
+	
+	sum = land + furniture + vehicles +royalty + others;
+	
+	if (!isNaN(sum)){
+    document.getElementById('total').value=sum;
+   
+	}
+}
+
+function sum(){
+          var expenses = parseFloat(document.getElementById('expenses').value);
+          var loan = parseFloat(document.getElementById('loan').value);
+          var tax = parseFloat(document.getElementById('tax').value);
+          var rent =  parseFloat(document.getElementById('rent').value);
+          var other =  parseFloat(document.getElementById('other').value);
+          
+          total = expenses + loan + tax + rent + other;
+          
+          if (!isNaN(total)){
+            document.getElementById('total-liabilities').value = total;
+          }
+        }
+        
+function calc(){
+  var assets = parseFloat(document.getElementById('total-liabilities').value);
+  var land = parseFloat(document.getElementById('land').value);
+	var furniture = parseFloat(document.getElementById('furniture').value);
+	var vehicles = parseFloat(document.getElementById('vehicles').value);
+	var royalty =  parseFloat(document.getElementById('royalty').value);
+	var others =  parseFloat(document.getElementById('others').value);
+	
+	liabilities = (land + furniture + vehicles +royalty + others);
+  net = -(assets - liabilities);
+  if (!isNaN(net)){
+    document.getElementById('net').value= net;
+
+}
+}
+</script>
+
+
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
-<!--<form action="" class="form-box col-lg">
-                    
-                </form>
