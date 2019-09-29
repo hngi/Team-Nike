@@ -58,8 +58,8 @@ if (isset($_SESSION['Name'])) {
   </header>
   <div class="container">
     <div class="alert alert-primary" role="alert">
-      All input fields must filled to get an accurate calculation! <br>
-      <b>Insert Zero(0) if the input field has to be empty!</b>
+      <span>All input fields must be filled, to get an accurate calculation! <br>
+      <b>Insert Zero(0), if the input field has to be empty!</b> </span>
     </div>
     <div class="row net-dis1">
       <div class="col-sm">
@@ -67,23 +67,23 @@ if (isset($_SESSION['Name'])) {
         <form class="form-box net-display text-center">
           <div class="form-group">
             <label class="col-xs sr-only">-Land Properties</label>
-            <input class="col-xs form-control" id="land" type="number" onchange="add()" placeholder="Land Properties">
+            <input class="col-xs form-control" id="land" type="number" onchange="add()" placeholder="Land Properties" required>
           </div>
           <div class="form-group">
             <label class="col-xs sr-only">-Funitures</label>
-            <input class="col-xs form-control" id="furniture" type="number" onchange="add()" placeholder="Funitures">
+            <input class="col-xs form-control" id="furniture" type="number" onchange="add()" placeholder="Funitures" required>
           </div>
           <div class="form-group">
             <label class="col-xs  sr-only">-Vehicles</label>
-            <input class="col-xs form-control" id="vehicles" type="number" onchange="add()" placeholder="Vehicles">
+            <input class="col-xs form-control" id="vehicles" type="number" onchange="add()" placeholder="Vehicles" required>
           </div>
           <div class="form-group">
             <label class="col-xs sr-only">-Royalty Payments</label>
-            <input class="col-xs form-control" id="royalty" type="number" onchange="add()" placeholder="Royalty Payments">
+            <input class="col-xs form-control" id="royalty" type="number" onchange="add()" placeholder="Royalty Payments" required>
           </div>
           <div class="form-group">
             <label class="col-xs sr-only">Add other Assets</label>
-            <input class="col-xs form-control" id="others" type="number" onchange="add()" placeholder="Add other Assets">
+            <input class="col-xs form-control" id="others" type="number" onchange="add()" placeholder="Add other Assets" required>
           </div>
           <input class="calc-btn btn btn-primary" type="reset" value="Reset Assets">
           <div class="form-group mt-4">
