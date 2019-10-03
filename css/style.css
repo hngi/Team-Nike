@@ -160,6 +160,10 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+.pReset{
+  margin: auto;
+}
 /* Tablet Responsiveness view*/
 
 @media (min-width: 767px) and (max-width: 1000px) {
@@ -190,6 +194,10 @@ a:hover {
   }
   p {
     font-size: 1em;
+  }
+
+  .pReset{
+    margin: auto;
   }
 }
 
@@ -229,6 +237,10 @@ a:hover {
   }
   p {
     font-size: 0.8em;
+  }
+
+  .pReset{
+    margin: auto;
   }
 }
 
