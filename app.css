@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color:  #E5E5E5;
+    font-family: 'Montserrat', sans-serif;
+}
+    
+.navbar {
+    display: flex;
+    align-items: center;
+    padding: 1em 2em;
+    background: #344A84;
+    color: #fff;
+}
+
+.navbar h1 {
+    flex: 1;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.navbarLinks a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin: 0 0 0 10px;
+    letter-spacing: 2px;
+}
+
+.pageTitle {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px 0;
+    line-height: 40px;
+}
+
+.pageTitle h1 {
+    font-weight: 500;
+    font-size: 2.4em;
+}
+
+.pageTitle p {
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+input,
+select,
+textarea,
+button {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    padding: .75em .5em;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin: 10px 0;
+    border: 0px;
+    border-radius: 8px;
+    background: transparent;
+    Border: 1px solid  #fff;
+    color: #fff;
+}
+
+option {
+    font-family: 'Montserrat', sans-serif;
+    padding: .75em .5em;
+    width: 100%;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+
+button {
+    background: #241D70;
+    color:  #E5E5E5;
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contact {
+    padding: 3em 3em 0 3em;
+    display: flex;
+    background: linear-gradient(#344A8480,#870e9262) #344A84;
+    min-height: 100%;
+}
+
+.contactDetails {
+    color: #fff;
+    flex: 1;
+}
+
+a {
+    color: #fff;
+}
+
+.contactDetails h3 {
+    padding-top: 20px;
+    padding-bottom: 5px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contactDetails li {
+    list-style: none;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contactForm {
+    width: 550px;
+}
+
+::placeholder {
+    color: #fff;
+}
+
+
