@@ -29,7 +29,7 @@ if (isset($_SESSION['Name'])) {
 
   <title>SignIn</title>
   <style type="text/css">
-    .container {
+      #printablediv {
       padding: 2em;
       font-family: 'Montserrat', serif;
     }
@@ -49,18 +49,29 @@ if (isset($_SESSION['Name'])) {
       outline: none;
     }
   </style>
+  <script language="javascript" type="text/javascript">
+  function printerDiv(printablediv) {
+	  var divElements = document.getElementById(printablediv).innerHTML;
+	  var oldPage = document.body.innerHTML;
+	  document.body.innerHTML = "<html><head><title></title></head><body>" + divElements + "</body>";
+	  window.print();
+	  document.body.innerHTML = oldPage;
+	  
+  }
+  </script>
 </head>
 
 <body>
   <header class="text-center mt-2">
     <h1 class="head-txt">Net Worth Calculator</h1>
-    <h3 class="wl-note lead mb-2">Welcome, <?php echo $user['Name']; ?></h3>
-  </header>
-  <div class="container">
     <div class="alert alert-primary" role="alert">
       <span>All input fields must be filled, to get an accurate calculation! <br>
       <b>Insert Zero(0), if the input field has to be empty!</b> </span>
     </div>
+  </header>
+  <div id="printablediv">
+    <h3 class="wl-note lead mb-2">Welcome, <?php echo $user['Name']; ?></h3>
+    
     <div class="row net-dis1">
       <div class="col-sm">
         <h3 class="lead text-center">Your Assets(what you own)</h3>
@@ -124,15 +135,18 @@ if (isset($_SESSION['Name'])) {
 
       </div>
 
-    </div>
+    
     <div class="calc-back text-center">
       <button class="calc-button btn btn-primary" onclick="calc()">Calculate</button>
-      <div class="output-result mt-2 mb-2">
+      
         <p class="lead mb-2">Total Networth:</p>
         <input class="col-xs form-control" id="net" type="number" onchange="add()" placeholder="Total Networth" disabled><br>
-      </div>
+      
     </div>
-
+   </div>
+  </div>
+  <input class="calc-btn btn btn-primary" type="button" value="Print Preview" onclick="javascript:printerDiv('printablediv')">
+  
     <?php
 
     /* Logout button */
