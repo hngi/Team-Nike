@@ -149,10 +149,6 @@ if (isset($_SESSION['Name'])) {
       <form action="home.php" method="post">
         <button style="width: 100%" type="submit" class="btn-sign-in" name="logout">Logout</button>
       </form>
-
-        <!-- Documentation Link -->
-    <div class="doc">
-        <a href="docs.html">Documentation</a>
     </div>
   </div>
 
