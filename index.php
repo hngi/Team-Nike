@@ -41,7 +41,7 @@
         if (empty($email || $pwd)) {
             $msg = 'Please fill in all fields';
         } elseif (strlen($pwd) < 5) {
-            $msg = 'Password must be more than 5 character.';
+            $msg = 'Password must be more than 5 charcter.';
         } else {
             /* loop through the users.json data */
             foreach ($data['users'] as $user) {
@@ -80,8 +80,6 @@
                 </div>
 
                 <button type="submit" name="log" class="btn-sign-in">Sign in</button>
-
-                <p class="pReset"><a href="forgotPassword.php">Forgot your Password?</a></p>                
                 <p>Don't have an account? <a href="register.php">Sign up here</a></p>
             </form>
         </section>
