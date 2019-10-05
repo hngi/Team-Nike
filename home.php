@@ -48,9 +48,6 @@ if (isset($_SESSION['Name'])) {
       background: #344A84;
       outline: none;
     }
-    h4{
-        text-align: center;
-      }
   </style>
 </head>
 
@@ -60,74 +57,6 @@ if (isset($_SESSION['Name'])) {
     <h3 class="wl-note lead mb-2">Welcome, <?php echo $user['Name']; ?></h3>
   </header>
   <div class="container">
-  <h4>Frequently Asked Questions</h4>
-      <h4>click on each of the links below to show description.</h4>
-          <div id="accordion">
-          <div class="card">
-              <div class="card-header">
-                  <a class="card-link" data-toggle="collapse" href="#collapseOne">Land Properties</a>
-              </div>
-              <div id="collapseOne" class="collapse show" data-parent="#accordion">
-                  <div class="card-body">Land property or Land estate is a property that generates income for the owner, without the owner having to do the actual work of the estate.</div>
-              </div>
-          </div>
-      <div class="card">
-              <div class="card-header">
-                  <a class="card-link" data-toggle="collapse" href="#collapseTwo">Expenses</a>
-              </div>
-              <div id="collapseTwo" class="collapse show" data-parent="#accordion">
-                  <div class="card-body">Expenses are the money spent or cost incurred in purchasing something.</div>
-              </div>
-          </div>
-      <div class="card">
-              <div class="card-header">
-                  <a class="card-link" data-toggle="collapse" href="#collapseThree">Furnitures</a>
-              </div>
-              <div id="collapseThree" class="collapse show" data-parent="#accordion">
-                  <div class="card-body">The movable objects intended to support human activites such as Tables(for eating), Bed(for sleeping).</div>
-              </div>
-          </div>
-      <div class="card">
-              <div class="card-header">
-                  <a class="card-link" data-toggle="collapse" href="#collapseFour">Personal Loan</a>
-              </div>
-              <div id="collapseFour" class="collapse show" data-parent="#accordion">
-                  <div class="card-body">A loan that establishes consumer credit that is granted for personal use; this is given out with the aim of being repayed.</div>
-              </div>
-          </div>
-      <div class="card">
-              <div class="card-header">
-                  <a class="card-link" data-toggle="collapse" href="#collapseFive">Vehicles</a>
-              </div>
-              <div id="collapseFive" class="collapse show" data-parent="#accordion">
-                  <div class="card-body">A thing used for transportation.</div>
-              </div>
-          </div>
-      <div class="card">
-              <div class="card-header">
-                  <a class="card-link" data-toggle="collapse" href="#collapseSix">Tax Payable</a>
-              </div>
-              <div id="collapseSix" class="collapse show" data-parent="#accordion">
-                  <div class="card-body">This is the compiled taxes due to the government within one year.</div>
-              </div>
-          </div>
-      <div class="card">
-              <div class="card-header">
-                  <a class="card-link" data-toggle="collapse" href="#collapseSeven">Royalty Payments</a>
-              </div>
-              <div id="collapseSeven" class="collapse show" data-parent="#accordion">
-                  <div class="card-body">A royalty is a payment made by one person/party to another person/party that owns a particular asset, for the right to ongoing use of that asset.</div>
-              </div>
-          </div>
-  <div class="card">
-          <div class="card-header">
-              <a class="card-link" data-toggle="collapse" href="#collapseEight">Rent/Lease Payment</a>
-          </div>
-          <div id="collapseEight" class="collapse show" data-parent="#accordion">
-              <div class="card-body">This is a tenant's regular payment to a landlord for the use of land or property for a specified time.</div>
-          </div>
-      </div>
-          </div>
     <div class="alert alert-primary" role="alert">
       <span>All input fields must be filled, to get an accurate calculation! <br>
       <b>Insert Zero(0), if the input field has to be empty!</b> </span>
