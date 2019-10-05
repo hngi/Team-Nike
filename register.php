@@ -60,6 +60,13 @@
 
     <div class="wrap">
         <h1>NetWorth Tracker</h1>
+        
+        <blockquote>	
+		 <p id="quote">
+			
+		</p>
+		</blockquote>
+        
         <section class="form-container">
             <h3>Create an Account</h3>
             <?php if (isset($msg)) {
