@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <link rel="stylesheet" href="app.css" />
-  </head>
+    </head>
 
   <body>
-    <div class="navbar">
+      <div class="navbar">
       <h1>Nike</h1>
       <div class="navbarLinks">
         <a href="#">Home</a>
@@ -38,15 +38,16 @@
         </div>
         <div class="contactForm">
             <form action="" method="post">
-                <input type="text" placeholder="Enter your Email...">
-                <input type="text" placeholder="Enter your Phone Number...">
+                <input type="Email" placeholder="Enter your Email..." required >
+                <input type="text" placeholder="Enter your Phone Number..." required>
                 <select name="" id="">
                     <option value="What can we help you with?" disabled selected>What can we help you with?</option>
                 </select>
                 <textarea name="" id="" cols="30" rows="10" placeholder="Do you have any questions, comments or other issues?"></textarea>
-                <button type="submit">Submit</button>
+                <button type="submit" id="regcomplete">Submit</button>
             </form>
         </div>
     </div>
+     <script src="Contact.js"></script>
   </body>
 </html>
