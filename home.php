@@ -58,6 +58,13 @@ if (isset($_SESSION['Name'])) {
   <header class="text-center mt-2">
     <h1 class="head-txt">Net Worth Calculator</h1>
     <h3 class="wl-note lead mb-2">Welcome, <?php echo $user['Name']; ?></h3>
+    
+    <blockquote>	
+       <p id="quote">
+
+      </p>
+		</blockquote>
+    
   </header>
   <div class="container">
   <h4>Frequently Asked Questions</h4>
