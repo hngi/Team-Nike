@@ -77,6 +77,20 @@ function addLiabilities() {
 }
 
 function calc() {
+
+	// body...
+	let asset = parseInt(document.getElementById('assets').value);
+	let cash = parseInt(document.getElementById('cash').value);
+	let liability = parseInt(document.getElementById('liability').value);
+	let result;
+
+	
+	if (result = asset + cash - liability) {
+		// result = parseInt(currency);
+		let toCurrency = new Intl.NumberFormat('en-NG', { style: 'currency', currency: 'NGN' }).format(result);
+		document.querySelector('#result').innerHTML = toCurrency;
+	}
+
   var assets = parseFloat(document.getElementById("total-liabilities").value);
   var land = parseFloat(document.getElementById("land").value);
   var furniture = parseFloat(document.getElementById("furniture").value);
@@ -89,4 +103,5 @@ function calc() {
   if (!isNaN(net)) {
     document.getElementById("net").value = net;
   }
+
 }
