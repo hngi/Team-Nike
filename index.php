@@ -1,7 +1,30 @@
+<?php
+require_once('config.php');
+
+if(isset($_SESSION['access_token'])){
+	header("Location: fb.php");
+	exit();
+}
+
+
+$redirectTo = "https://nike.carlyitservices.com/callback.php";
+$data = ['email'];
+$fullURL = $handler->getLoginUrl($redirectTo, $data);
+?>
+
+
+
 <!DOCTYPE html>
 
 <html class="no-js">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 
 <head>
     <meta charset="utf-8">
@@ -14,6 +37,7 @@
 </head>
 
 <body>
+   
 
     <?php
     session_start();
@@ -22,7 +46,7 @@
     
      if (isset($_GET['signup'])) {
         if ($_GET['signup'] == 'success') {
-            $msg = '<p style="color: green">Your account has been successfully created</p>';    
+            $msg = '<p style="color: green">Your account has been created successfully</p>';    
             // echo 'hi';
         }
     }
@@ -80,6 +104,14 @@
                 </div>
 
                 <button type="submit" name="log" class="btn-sign-in">Sign in</button>
+                
+                
+    <a class="btn btn-lg btn-social btn-facebook" onclick="window.location = '<?php echo $fullURL ?>'">
+    <i class="fa fa-facebook fa-fw"  onclick="window.location = '<?php echo $fullURL ?>'"></i> Sign in with Facebook
+    </a>
+
+               
+                <!--<input type="button" onclick="window.location = '<?php echo $fullURL ?>'" value="Login with Facebook" class="loginBtn loginBtn--facebook">-->
                 <p>Don't have an account? <a href="register.php">Sign up here</a></p>
             </form>
         </section>

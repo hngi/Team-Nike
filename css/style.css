@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
 * {
   box-sizing: border-box;
@@ -17,24 +16,75 @@ html {
   /* background: linear-gradient(180deg, #1DA88F 0%, rgba(99, 187, 68, 0.38) 100%); */
   width: 100%;
   height: 100%;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   /* overflow: hidden; */
 }
+.loginBtn {
+  box-sizing: border-box;
+  position: relative;
+  /* width: 13em;  - apply for fixed size */
+  margin: 0.2em;
+  padding: 0 15px 0 46px;
+  border: none;
+  text-align: left;
+  line-height: 34px;
+  white-space: nowrap;
+  border-radius: 0.2em;
+  font-size: 16px;
+  color: #FFF;
+}
+.loginBtn:before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 34px;
+  height: 100%;
+}
+.loginBtn:focus {
+  outline: none;
+}
+.loginBtn:active {
+  box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
+}
+
+
+/* Facebook */
+.loginBtn--facebook {
+  background-color: #4C69BA;
+  background-image: linear-gradient(#4C69BA, #3B55A0);
+  /*font-family: "Helvetica neue", Helvetica Neue, Helvetica, Arial, sans-serif;*/
+  text-shadow: 0 -1px 0 #354C8C;
+}
+.loginBtn--facebook:before {
+  border-right: #364e92 1px solid;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png') 6px 6px no-repeat;
+}
+.loginBtn--facebook:hover,
+.loginBtn--facebook:focus {
+  background-color: #5B7BD5;
+  background-image: linear-gradient(#5B7BD5, #4864B1);
+}
+
+
+
 
 .wrap {
   display: flex;
   flex-flow: column wrap;
 }
 
-.wrap h1, .wrap > h3 {
-    margin: 10px auto;
+.wrap h1,
+.wrap > h3 {
+  margin: 10px auto;
 }
 
 h1 {
   margin: 2em auto 0 auto;
   padding-top: 2em;
   color: #344a84;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   font-size: 0.8em;
 }
@@ -45,7 +95,7 @@ section.form-container {
   background: transparent;
   background: rgba(52, 73, 132, 0.178);
   width: 350px;
-  margin: 100px auto;
+  margin: 15px auto 100px auto;
   padding: 1.5em;
 }
 
@@ -76,7 +126,7 @@ input[type="email"] {
 
 ::placeholder {
   position: relative;
-  left: 0.8em;
+  left: 0.1em;
   color: #474747;
 }
 
@@ -195,7 +245,7 @@ a:hover {
 
 @media (min-width: 1001px) and (max-width: 1300px) {
   .wrap {
-    padding: 0 10em;
+    /* padding: 0 10em; */
   }
   h1 {
     margin: 1.5em auto 1.5em auto;
@@ -206,11 +256,11 @@ a:hover {
 
 @media (min-width: 1301px) {
   .wrap {
-    padding: 0 30em;
+    /* padding: 0 30em; */
   }
   h1 {
     margin: 1em auto 1em auto;
-    font-size: 1.8em;
+    font-size: 1.3em;
   }
   .form-container .form-wrap {
     padding: 0 1em;
@@ -234,10 +284,67 @@ a:hover {
 
 @media (min-width: 1500px) {
   .wrap {
-    padding: 0 33em;
+    /* padding: 0 33em; */
   }
   h1 {
     margin: 2em auto 1em auto;
     font-size: 1.8em;
   }
+}
+
+/* Logout */
+.logout {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.logout button {
+  font-size: 12px;
+  padding: 10px;
+}
+
+/* Modal */
+.display-result {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.display-result-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem 1.5rem;
+  width: 24rem;
+  border-radius: 0.5rem;
+}
+
+.show-result {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.close-btn {
+  float: right;
+  width: 1.5rem;
+  line-height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: lightgray;
+}
+.close-btn:hover {
+  background-color: darkgray;
 }
